@@ -1,0 +1,10 @@
+{{- /* Affiliate CTA block: used after the first working step and at the end of a post */ -}}
+{{- $program := .Get "program" -}}
+{{- $title := .Get "title" -}}
+{{- $button := .Get "button" | default (i18n "cta_button") -}}
+{{- $slug := path.Base .Page.RelPermalink -}}
+<aside class="aff-cta">
+  {{ with $title }}<strong>{{ . }}</strong>{{ end }}
+  <p>{{ .Inner | .Page.RenderString }}</p>
+  <a class="aff-btn" href="/go/{{ $program }}/?utm_source=news&amp;utm_medium=cta&amp;utm_campaign={{ $slug }}" rel="sponsored nofollow noopener" target="_blank">{{ $button }}</a>
+</aside>

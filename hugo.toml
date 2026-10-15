@@ -1,0 +1,216 @@
+baseURL = "https://news.rozoom.app/"
+title = "Rozoom News"
+theme = "PaperMod"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+enableEmoji = false
+buildDrafts = false
+buildFuture = false
+summaryLength = 30
+[pagination]
+  pagerSize = 10
+timeZone = "Europe/Zurich"
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.highlight]
+  noClasses = false
+  codeFences = true
+  guessSyntax = true
+  lineNos = false
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  env = "production"
+  author = "U_DAW"
+  description = "Self-hosting, Kubernetes and Swiss cloud, written from production servers."
+  keywords = ["self-hosting", "kubernetes", "hetzner", "switzerland", "privacy"]
+  images = ["/og-default.png"]
+  DateFormat = "2006-01-02"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  ShowLastMod = true
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  hidemeta = false
+  comments = false
+  # analytics + newsletter endpoints are filled in once the services are live
+  umamiScriptUrl = ""
+  umamiWebsiteId = ""
+  newsletterAction = ""
+
+[params.homeInfoParams]
+  Title = "Notes from real servers"
+  Content = "Self-hosting, Kubernetes and Swiss cloud services. Every guide is run on a machine we pay for."
+
+[params.assets]
+  disableHLJS = true
+  favicon = "/favicon.ico"
+  favicon32x32 = "/favicon-32x32.png"
+  apple_touch_icon = "/apple-touch-icon.png"
+
+# ---------------- languages ----------------
+
+[languages.en]
+  label = "English"
+  locale = "en-GB"
+  contentDir = "content"
+  weight = 1
+  title = "Rozoom News"
+  [languages.en.params]
+    description = "Self-hosting, Kubernetes and Swiss cloud, written from production servers."
+  [[languages.en.menu.main]]
+    name = "Self-hosting"
+    url = "/self-hosting/"
+    weight = 10
+  [[languages.en.menu.main]]
+    name = "Kubernetes"
+    url = "/kubernetes/"
+    weight = 20
+  [[languages.en.menu.main]]
+    name = "Switzerland"
+    url = "/switzerland/"
+    weight = 30
+  [[languages.en.menu.main]]
+    name = "Voice & AI"
+    url = "/voice-ai/"
+    weight = 40
+  [[languages.en.menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 90
+
+[languages.de]
+  label = "Deutsch"
+  locale = "de-CH"
+  contentDir = "content"
+  weight = 2
+  title = "Rozoom News"
+  [languages.de.params]
+    description = "Self-Hosting, Kubernetes und Schweizer Cloud, direkt aus dem Produktivbetrieb."
+  [[languages.de.menu.main]]
+    name = "Self-Hosting"
+    url = "/de/self-hosting/"
+    weight = 10
+  [[languages.de.menu.main]]
+    name = "Kubernetes"
+    url = "/de/kubernetes/"
+    weight = 20
+  [[languages.de.menu.main]]
+    name = "Schweiz"
+    url = "/de/switzerland/"
+    weight = 30
+  [[languages.de.menu.main]]
+    name = "Voice & AI"
+    url = "/de/voice-ai/"
+    weight = 40
+  [[languages.de.menu.main]]
+    name = "Über"
+    url = "/de/about/"
+    weight = 90
+
+[languages.fr]
+  label = "Français"
+  locale = "fr-CH"
+  contentDir = "content"
+  weight = 3
+  title = "Rozoom News"
+  [languages.fr.params]
+    description = "Auto-hébergement, Kubernetes et cloud suisse, depuis des serveurs en production."
+  [[languages.fr.menu.main]]
+    name = "Auto-hébergement"
+    url = "/fr/self-hosting/"
+    weight = 10
+  [[languages.fr.menu.main]]
+    name = "Kubernetes"
+    url = "/fr/kubernetes/"
+    weight = 20
+  [[languages.fr.menu.main]]
+    name = "Suisse"
+    url = "/fr/switzerland/"
+    weight = 30
+  [[languages.fr.menu.main]]
+    name = "Voice & AI"
+    url = "/fr/voice-ai/"
+    weight = 40
+  [[languages.fr.menu.main]]
+    name = "À propos"
+    url = "/fr/about/"
+    weight = 90
+
+[languages.it]
+  label = "Italiano"
+  locale = "it-CH"
+  contentDir = "content"
+  weight = 4
+  title = "Rozoom News"
+  [languages.it.params]
+    description = "Self-hosting, Kubernetes e cloud svizzero, da server in produzione."
+  [[languages.it.menu.main]]
+    name = "Self-hosting"
+    url = "/it/self-hosting/"
+    weight = 10
+  [[languages.it.menu.main]]
+    name = "Kubernetes"
+    url = "/it/kubernetes/"
+    weight = 20
+  [[languages.it.menu.main]]
+    name = "Svizzera"
+    url = "/it/switzerland/"
+    weight = 30
+  [[languages.it.menu.main]]
+    name = "Voice & AI"
+    url = "/it/voice-ai/"
+    weight = 40
+  [[languages.it.menu.main]]
+    name = "Chi siamo"
+    url = "/it/about/"
+    weight = 90
+
+[languages.uk]
+  label = "Українська"
+  locale = "uk-UA"
+  contentDir = "content"
+  weight = 5
+  title = "Rozoom News"
+  [languages.uk.params]
+    description = "Self-hosting, Kubernetes і швейцарський хостинг з реальних серверів."
+  [[languages.uk.menu.main]]
+    name = "Self-hosting"
+    url = "/uk/self-hosting/"
+    weight = 10
+  [[languages.uk.menu.main]]
+    name = "Kubernetes"
+    url = "/uk/kubernetes/"
+    weight = 20
+  [[languages.uk.menu.main]]
+    name = "Швейцарія"
+    url = "/uk/switzerland/"
+    weight = 30
+  [[languages.uk.menu.main]]
+    name = "Voice & AI"
+    url = "/uk/voice-ai/"
+    weight = 40
+  [[languages.uk.menu.main]]
+    name = "Про нас"
+    url = "/uk/about/"
+    weight = 90

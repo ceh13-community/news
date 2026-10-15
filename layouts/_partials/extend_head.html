@@ -1,0 +1,23 @@
+{{- /* x-default alternate: the English version is the entry point for search engines */}}
+{{- $xdef := . }}
+{{- range .AllTranslations }}{{ if eq .Lang "en" }}{{ $xdef = . }}{{ end }}{{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ $xdef.Permalink }}">
+
+
+{{- with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {{- range $i, $qa := . }}{{ if $i }},{{ end }}
+    { "@type": "Question", "name": {{ $qa.q }}, "acceptedAnswer": { "@type": "Answer", "text": {{ $qa.a }} } }
+  {{- end }}
+  ]
+}
+</script>
+{{- end }}
+
+{{- if and site.Params.umamiScriptUrl site.Params.umamiWebsiteId }}
+<script defer src="{{ site.Params.umamiScriptUrl }}" data-website-id="{{ site.Params.umamiWebsiteId }}"></script>
+{{- end }}

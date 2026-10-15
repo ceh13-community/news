@@ -1,0 +1,25 @@
+{{- if or .IsPage .IsHome }}
+<div class="newsletter">
+  <strong>{{ i18n "newsletter_title" }}</strong>
+  <p>{{ i18n "newsletter_text" }}</p>
+  {{- with site.Params.newsletterAction }}
+  <form class="newsletter-form" method="post" action="{{ . }}">
+    <input type="email" name="email" required placeholder="{{ i18n "newsletter_placeholder" }}" aria-label="{{ i18n "newsletter_placeholder" }}">
+    <button type="submit">{{ i18n "newsletter_button" }}</button>
+  </form>
+  {{- else }}
+  <p class="newsletter-soon">{{ i18n "newsletter_soon" }}</p>
+  {{- end }}
+</div>
+<style>
+.newsletter{max-width:var(--content-width,720px);margin:2rem auto 0;padding:1rem 1.2rem;border:1px solid var(--border);border-radius:var(--radius)}
+.newsletter p{margin:.4rem 0 .8rem}
+.newsletter-form{display:flex;gap:.5rem;flex-wrap:wrap}
+.newsletter-form input{flex:1 1 14rem;padding:.5rem .6rem;border:1px solid var(--border);border-radius:var(--radius);background:var(--theme);color:var(--primary)}
+.newsletter-form button{padding:.5rem 1rem;border:0;border-radius:var(--radius);background:var(--primary);color:var(--theme);cursor:pointer}
+.aff-disclosure{font-size:.85rem;opacity:.8;border-left:3px solid var(--border);padding:.2rem 0 .2rem .8rem;margin:0 0 1.2rem}
+.aff-cta{margin:1.6rem 0;padding:1rem 1.2rem;border:1px solid var(--border);border-radius:var(--radius)}
+.aff-cta p{margin:.3rem 0 .7rem}
+.aff-cta a.aff-btn{display:inline-block;padding:.5rem 1rem;border-radius:var(--radius);background:var(--primary);color:var(--theme);text-decoration:none}
+</style>
+{{- end }}

@@ -1,0 +1,5 @@
+{{- /* Affiliate link: /go/<program>/ redirect, sponsored + nofollow, UTM carries the article slug */ -}}
+{{- $program := .Get "program" | default (.Get 0) -}}
+{{- $text := .Get "text" | default (.Get 1) | default $program -}}
+{{- $slug := path.Base .Page.RelPermalink -}}
+<a href="/go/{{ $program }}/?utm_source=news&amp;utm_medium=post&amp;utm_campaign={{ $slug }}" rel="sponsored nofollow noopener" target="_blank">{{ $text }}</a>

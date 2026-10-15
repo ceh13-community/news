@@ -1,0 +1,73 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-news
+  cancel-in-progress: false
+
+env:
+  HUGO_VERSION: "0.168.0"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Install Hugo ${{ env.HUGO_VERSION }} (extended)
+        run: |
+          set -euo pipefail
+          cd /tmp
+          base="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+          curl -sSL -o hugo.tar.gz "$base/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          curl -sSL -o checksums.txt "$base/hugo_${HUGO_VERSION}_checksums.txt"
+          want=$(grep "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz" checksums.txt | cut -d' ' -f1)
+          echo "$want  hugo.tar.gz" | sha256sum -c -
+          tar xzf hugo.tar.gz hugo
+          sudo install -m 0755 hugo /usr/local/bin/hugo
+          hugo version
+
+      - name: Build
+        run: hugo --gc --minify --baseURL "https://news.rozoom.app/"
+
+      - name: Guard against an empty build
+        run: |
+          set -euo pipefail
+          test -s public/index.html
+          test -s public/sitemap.xml
+          for lang in de fr it uk; do test -s "public/$lang/index.html"; done
+
+      - name: Deploy over rsync
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+          rsync -rltz --delete --omit-dir-times \
+            -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o UserKnownHostsFile=~/.ssh/known_hosts" \
+            public/ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+
+      - name: Smoke test
+        run: |
+          set -euo pipefail
+          for url in https://news.rozoom.app/ https://news.rozoom.app/de/ https://news.rozoom.app/sitemap.xml; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --retry 3 --retry-delay 5 "$url")
+            echo "$url -> $code"
+            test "$code" = "200"
+          done

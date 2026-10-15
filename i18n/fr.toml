@@ -1,0 +1,14 @@
+[newsletter_title]
+other = "Recevez les nouveaux guides par e-mail"
+[newsletter_text]
+other = "Un court e-mail toutes les deux semaines : le dernier guide et un outil qui vaut son prix."
+[newsletter_placeholder]
+other = "votre@email.com"
+[newsletter_button]
+other = "S'abonner"
+[newsletter_soon]
+other = "Le formulaire d'inscription arrive avec le premier guide."
+[aff_disclosure]
+other = "Certains liens de cette page sont des liens d'affiliation : si vous vous inscrivez via ces liens, ce site touche une commission, sans surcoût pour vous. Les prix et les recommandations ne changent pas."
+[cta_button]
+other = "Voir les tarifs actuels"

@@ -12,7 +12,7 @@ ShowWordCount: false
 
 Diese Seite schreibt eine Person, die die beschriebenen Server auch betreibt: eine Handvoll VPS
 in Europa, ein kleiner Kubernetes-Cluster, eine Nextcloud-Instanz, ein Internetradio und ein paar
-Sprach-Gadgets auf einem Schreibtisch in der Schweiz.
+Sprach-Gadgets auf dem Schreibtisch.
 
 Jeder Befehl in einer Anleitung lief auf einer Maschine, die bezahlt wird. Wenn etwas kaputtging,
 steht es in der Anleitung. Wenn ein Schritt ungetestet ist, steht das auch da.

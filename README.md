@@ -17,7 +17,7 @@ git submodule update --init --recursive
 
 ## Layout
 
-- `content/<section>/<slug>.<lang>.md` posts, sections: `self-hosting`, `kubernetes`, `switzerland`, `voice-ai`
+- `content/<section>/<slug>.<lang>.md` posts, sections: `self-hosting`, `kubernetes`, `cloud`, `voice-ai`
 - `content/<page>.<lang>.md` standalone pages: about, privacy, affiliate-disclosure, contact
 - `layouts/_partials/extend_head.html` hreflang x-default, FAQ schema, analytics hook
 - `layouts/_partials/extend_footer.html` newsletter block and shared CSS
@@ -61,7 +61,7 @@ Google code at all, verified in the built HTML. Turning ads on, in order:
 3. Serve `ads.txt` from the site root:
    `echo 'google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0' > static/ads.txt`
 4. Enable the consent message in AdSense (Privacy and messaging). It is a Google-certified CMP and
-   is required for Swiss and EEA traffic; the loader script pulls it in, nothing extra goes here.
+   is required wherever consent law applies; the loader script pulls it in, nothing extra goes here.
 
 Placement rules enforced in the templates, not left to discipline:
 

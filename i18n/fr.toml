@@ -15,4 +15,4 @@ other = "Voir les tarifs actuels"
 [ad_label]
 other = "Publicité"
 [ads_privacy]
-other = "**Publicité.** Ce site affiche des annonces Google AdSense. Google et ses partenaires peuvent déposer des cookies ou lire des identifiants d'appareil pour mesurer et personnaliser ces annonces. Les visiteurs en Suisse et dans l'EEE sont invités à donner leur consentement via le message de consentement de Google avant cela, et ce choix reste modifiable depuis la même bannière. Un refus ne limite pas l'usage du site : les annonces sont alors non personnalisées."
+other = "**Publicité.** Ce site affiche des annonces Google AdSense. Google et ses partenaires peuvent déposer des cookies ou lire des identifiants d'appareil pour mesurer et personnaliser ces annonces. Là où le consentement est légalement requis, il est demandé via le message de consentement de Google avant cela, et ce choix reste modifiable depuis la même bannière. Un refus ne limite pas l'usage du site : les annonces sont alors non personnalisées."

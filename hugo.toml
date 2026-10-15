@@ -34,7 +34,6 @@ timeZone = "Europe/Zurich"
 
 [params]
   env = "production"
-  author = "U_DAW"
   description = "Self-hosting, Kubernetes and cloud infrastructure, written from production servers."
   keywords = ["self-hosting", "kubernetes", "hetzner", "vps", "docker"]
   images = ["/og-default.png"]
@@ -110,7 +109,7 @@ timeZone = "Europe/Zurich"
 
 [languages.de]
   label = "Deutsch"
-  locale = "de-CH"
+  locale = "de-DE"
   contentDir = "content"
   weight = 2
   title = "Rozoom News"
@@ -139,7 +138,7 @@ timeZone = "Europe/Zurich"
 
 [languages.fr]
   label = "Français"
-  locale = "fr-CH"
+  locale = "fr-FR"
   contentDir = "content"
   weight = 3
   title = "Rozoom News"
@@ -168,7 +167,7 @@ timeZone = "Europe/Zurich"
 
 [languages.it]
   label = "Italiano"
-  locale = "it-CH"
+  locale = "it-IT"
   contentDir = "content"
   weight = 4
   title = "Rozoom News"

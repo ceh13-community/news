@@ -77,8 +77,9 @@
   "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
   "wordCount" : "{{ .WordCount }}",
   "inLanguage": {{ .Language.Lang | default "en-us" }},
-  {{- /* local override: PaperMod omits the author, Google asks for it on articles */}}
-  "author": { "@type": "Person", "name": {{ site.Params.author | default site.Title }} },
+  {{- /* local override: PaperMod omits the author, Google asks for it on articles.
+         The site itself is the author: no personal names anywhere in the output. */}}
+  "author": { "@type": "Organization", "name": {{ site.Title }} },
   {{ if .Params.cover.image -}}
   "image":
     {{- if (ne .Params.cover.relative true) -}}

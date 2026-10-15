@@ -12,7 +12,7 @@ ShowWordCount: false
 
 Questo sito e scritto da una persona che gestisce in prima persona i server descritti nelle guide:
 alcuni VPS in Europa, un piccolo cluster Kubernetes, una installazione Nextcloud, una radio online e
-qualche gadget vocale su una scrivania in Svizzera.
+qualche gadget vocale su una scrivania.
 
 Ogni comando pubblicato qui ha girato su una macchina che qualcuno paga. Se qualcosa si e rotto, la
 guida lo dice. Se un passaggio non e stato testato, lo dice anche.

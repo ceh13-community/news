@@ -15,4 +15,4 @@ other = "Check current pricing"
 [ad_label]
 other = "Advertisement"
 [ads_privacy]
-other = "**Advertising.** This site shows Google AdSense ads. Google and its partners may set cookies or read device identifiers to measure and personalise those ads. Visitors in Switzerland and the EEA are asked for consent through Google's consent message before any of that happens, and the choice can be changed at any time from the same banner. Declining keeps the site fully usable; ads then run without personalisation."
+other = "**Advertising.** This site shows Google AdSense ads. Google and its partners may set cookies or read device identifiers to measure and personalise those ads. Where consent is legally required, it is asked for through Google's consent message before any of that happens, and the choice can be changed at any time from the same banner. Declining keeps the site fully usable; ads then run without personalisation."

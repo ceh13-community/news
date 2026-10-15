@@ -12,7 +12,7 @@ ShowWordCount: false
 
 Ce site est écrit par une personne qui exploite elle-même les serveurs décrits dans les guides :
 quelques VPS en Europe, un petit cluster Kubernetes, une instance Nextcloud, une radio en ligne et
-quelques gadgets vocaux sur un bureau en Suisse.
+quelques gadgets vocaux sur un bureau.
 
 Chaque commande publiée ici a tourné sur une machine payante. Quand quelque chose a cassé, le guide
 le dit. Quand une étape n'a pas été testée, le guide le dit aussi.

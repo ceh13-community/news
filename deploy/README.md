@@ -12,20 +12,23 @@ The site is static files served by nginx behind the Caddy that already terminate
 The deploy key is restricted on the box to `command="/usr/bin/rrsync -wo /home/ubuntu/stack/news"`,
 so it can only write into that one directory: no shell, no reads, no port forwarding.
 
-## Known trap
+## Caddy config lives in a directory now
 
-The Caddy container bind-mounts the Caddyfile as a single file and was started three months ago.
-The inode it holds no longer matches `/home/ubuntu/stack/Caddyfile`, so `caddy reload` against
-`/etc/caddy/Caddyfile` reads a stale copy. Until the container is recreated, config changes have to
-be pushed in with:
+Config is `/home/ubuntu/stack/caddy/Caddyfile`, mounted as `./caddy:/etc/caddy:ro`:
 
 ```bash
-docker cp /home/ubuntu/stack/Caddyfile caddy:/tmp/Caddyfile.new
-docker exec caddy caddy validate --adapter caddyfile --config /tmp/Caddyfile.new
-docker exec caddy caddy reload  --adapter caddyfile --config /tmp/Caddyfile.new
+docker exec caddy caddy validate --adapter caddyfile --config /etc/caddy/Caddyfile
+docker exec caddy caddy reload   --adapter caddyfile --config /etc/caddy/Caddyfile
 ```
 
-A container restart would fall back to the stale file and drop the `news.rozoom.app` block. The
-permanent fix is to recreate the caddy container once with the directory mounted instead of the
-single file (`./caddy:/etc/caddy`), which costs a few seconds of downtime for the other three
-hostnames.
+It used to be a single-file bind mount, which pinned an inode that later edits replaced, so reloads
+silently read a stale copy and answered "config is unchanged". If a Caddy edit ever appears to do
+nothing, compare `stat -c %i` on the file inside and outside the container before suspecting the
+config itself.
+
+## Analytics
+
+Self-hosted Umami at `https://stats.rozoom.app`, same compose stack (`umami` + `umami-db`,
+postgres 17). The tracking script is wired through `params.umamiScriptUrl` and
+`params.umamiWebsiteId` in `hugo.toml`; the website id is public by design, the admin credentials
+are not in this repo.

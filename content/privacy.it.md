@@ -12,11 +12,13 @@ ShowWordCount: false
 
 **Statistiche.** Questo sito usa una propria istanza Umami sullo stesso server, senza cookie e
 senza tracciamento tra siti. Viene salvata una visualizzazione aggregata: pagina, referrer, paese,
-famiglia di browser, dimensione dello schermo. Nessun indirizzo IP, nessun profilo, nessuna
-condivisione con terzi e nulla caricato da Google o altri fornitori di statistiche.
+famiglia di browser, dimensione dello schermo. Nessun indirizzo IP, nessun profilo e nessuna
+condivisione dei dati statistici con terzi.
 
 **Newsletter.** Se ti iscrivi, l'indirizzo e-mail viene conservato solo per inviare la newsletter.
 Ogni e-mail contiene un link di disiscrizione; la disiscrizione cancella l'indirizzo.
+
+{{< ads-notice >}}
 
 **Link di affiliazione.** Un clic su un link di affiliazione ti porta dal fornitore, che imposta i
 propri cookie secondo la propria informativa. Vedi la

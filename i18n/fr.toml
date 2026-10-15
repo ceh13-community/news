@@ -12,3 +12,7 @@ other = "Le formulaire d'inscription arrive avec le premier guide."
 other = "Certains liens de cette page sont des liens d'affiliation : si vous vous inscrivez via ces liens, ce site touche une commission, sans surcoût pour vous. Les prix et les recommandations ne changent pas."
 [cta_button]
 other = "Voir les tarifs actuels"
+[ad_label]
+other = "Publicité"
+[ads_privacy]
+other = "**Publicité.** Ce site affiche des annonces Google AdSense. Google et ses partenaires peuvent déposer des cookies ou lire des identifiants d'appareil pour mesurer et personnaliser ces annonces. Les visiteurs en Suisse et dans l'EEE sont invités à donner leur consentement via le message de consentement de Google avant cela, et ce choix reste modifiable depuis la même bannière. Un refus ne limite pas l'usage du site : les annonces sont alors non personnalisées."

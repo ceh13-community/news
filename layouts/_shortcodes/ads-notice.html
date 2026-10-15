@@ -1,0 +1,5 @@
+{{- /* Privacy-page paragraph about ads. Silent while no ad client is configured,
+       so the page never promises or denies the wrong thing. */ -}}
+{{- with site.Params.adsenseClient }}
+<p>{{ i18n "ads_privacy" | safeHTML }}</p>
+{{- end }}

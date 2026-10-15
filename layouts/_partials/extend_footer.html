@@ -1,3 +1,6 @@
+{{- if and .IsPage (in (slice "self-hosting" "kubernetes" "cloud" "voice-ai") .Section) }}
+{{- partial "adsense-unit.html" (dict "slot" site.Params.adsenseSlotBelowPost "page" . "format" "auto") }}
+{{- end }}
 {{- if or .IsPage .IsHome }}
 <div class="newsletter">
   <strong>{{ i18n "newsletter_title" }}</strong>
@@ -20,6 +23,8 @@
 .aff-disclosure{font-size:.85rem;opacity:.8;border-left:3px solid var(--border);padding:.2rem 0 .2rem .8rem;margin:0 0 1.2rem}
 .aff-cta{margin:1.6rem 0;padding:1rem 1.2rem;border:1px solid var(--border);border-radius:var(--radius)}
 .aff-cta p{margin:.3rem 0 .7rem}
+.ad-slot{margin:2rem auto;max-width:var(--content-width,720px);min-height:1px}
+.ad-label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin-bottom:.3rem}
 .aff-cta a.aff-btn{display:inline-block;padding:.5rem 1rem;border-radius:var(--radius);background:var(--primary);color:var(--theme);text-decoration:none}
 </style>
 {{- end }}

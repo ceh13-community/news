@@ -12,11 +12,13 @@ ShowWordCount: false
 
 **Analytics.** Diese Seite betreibt eine eigene Umami-Instanz auf demselben Server, ohne Cookies
 und ohne seitenübergreifendes Tracking. Gespeichert wird ein aggregierter Seitenaufruf: Seite,
-Referrer, Land, Browserfamilie, Bildschirmgrösse. Keine IP-Adresse, kein Profil, keine Weitergabe an
-Dritte, und es wird nichts von Google oder einem anderen Analyseanbieter geladen.
+Referrer, Land, Browserfamilie, Bildschirmgrösse. Keine IP-Adresse, kein Profil und keine Weitergabe von
+Statistikdaten an Dritte.
 
 **Newsletter.** Bei einer Anmeldung wird die E-Mail-Adresse nur zum Versand des Newsletters
 gespeichert. Jede E-Mail enthält einen Abmeldelink; die Abmeldung löscht die Adresse.
+
+{{< ads-notice >}}
 
 **Affiliate-Links.** Ein Klick auf einen Affiliate-Link führt zum Anbieter, der eigene Cookies nach
 eigener Datenschutzerklärung setzt. Siehe [Affiliate-Hinweis](/de/affiliate-disclosure/).

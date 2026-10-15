@@ -12,3 +12,7 @@ other = "The signup form goes live with the first guide."
 other = "Some links on this page are affiliate links: if you sign up through them, this site earns a commission at no extra cost to you. Prices and recommendations are not affected."
 [cta_button]
 other = "Check current pricing"
+[ad_label]
+other = "Advertisement"
+[ads_privacy]
+other = "**Advertising.** This site shows Google AdSense ads. Google and its partners may set cookies or read device identifiers to measure and personalise those ads. Visitors in Switzerland and the EEA are asked for consent through Google's consent message before any of that happens, and the choice can be changed at any time from the same banner. Declining keeps the site fully usable; ads then run without personalisation."

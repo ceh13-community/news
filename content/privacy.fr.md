@@ -12,11 +12,13 @@ ShowWordCount: false
 
 **Statistiques.** Ce site fait tourner sa propre instance Umami sur le même serveur, sans cookies
 et sans suivi inter-sites. Une vue de page agrégée est enregistrée : page, référent, pays, famille de
-navigateur, taille d'écran. Aucune adresse IP conservée, aucun profil, aucun partage avec des tiers,
-et rien n'est chargé depuis Google ou un autre fournisseur de statistiques.
+navigateur, taille d'écran. Aucune adresse IP conservée, aucun profil, et aucune donnée
+de statistiques partagée avec des tiers.
 
 **Newsletter.** En cas d'inscription, l'adresse e-mail sert uniquement à envoyer la newsletter.
 Chaque e-mail contient un lien de désinscription ; la désinscription supprime l'adresse.
+
+{{< ads-notice >}}
 
 **Liens affiliés.** Un clic sur un lien affilié vous envoie chez le fournisseur, qui dépose ses
 propres cookies selon sa propre politique. Voir la

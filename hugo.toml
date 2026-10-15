@@ -57,6 +57,15 @@ timeZone = "Europe/Zurich"
   umamiScriptUrl = "https://stats.rozoom.app/script.js"
   umamiWebsiteId = "9f750516-e1ba-45ad-90e4-b1389fcc115c"
   newsletterAction = ""
+  # Google AdSense: empty client id = no ad code on the site at all.
+  # Fill adsenseClient after the account is approved, then the slot ids.
+  adsenseClient = ""
+  adsenseSlotInArticle = ""
+  adsenseSlotBelowPost = ""
+  # policy pages stay ad-free
+  adsenseExcludeSlugs = ["about", "privacy", "affiliate-disclosure", "contact"]
+  # hard ceiling on manual units per post, per the project rules
+  adsenseMaxPerPost = 3
 
 [params.homeInfoParams]
   Title = "Notes from real servers"

@@ -21,3 +21,13 @@
 {{- if and site.Params.umamiScriptUrl site.Params.umamiWebsiteId }}
 <script defer src="{{ site.Params.umamiScriptUrl }}" data-website-id="{{ site.Params.umamiWebsiteId }}"></script>
 {{- end }}
+
+{{- /*
+  AdSense loader. Absent until a client id is configured, so an unapproved or
+  unconfigured site ships zero Google code. Consent for EEA/CH traffic comes from
+  Google's own certified consent message (AdSense > Privacy and messaging), which
+  this script pulls in; no separate CMP is embedded here.
+*/ -}}
+{{- with site.Params.adsenseClient }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+{{- end }}

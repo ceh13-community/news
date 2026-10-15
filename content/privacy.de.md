@@ -10,9 +10,10 @@ ShowReadingTime: false
 ShowWordCount: false
 ---
 
-**Analytics.** Diese Seite nutzt eine selbst gehostete Analytics-Instanz ohne Cookies und ohne
-seitenübergreifendes Tracking. Gespeichert wird ein aggregierter Seitenaufruf: Seite, Referrer,
-Land, Browserfamilie, Bildschirmgrösse. Keine IP-Adresse, kein Profil, keine Weitergabe an Dritte.
+**Analytics.** Derzeit erhebt diese Seite nichts: keine Cookies, kein Aufrufzähler, keine Skripte
+Dritter. Wird später eine selbst gehostete, cookiefreie Analytics-Instanz aktiviert, wird diese
+Seite vorher aktualisiert, und gespeichert werden nur aggregierte Daten: Seite, Referrer, Land,
+Browserfamilie, Bildschirmgrösse. Keine IP-Adresse, kein Profil, keine Weitergabe an Dritte.
 
 **Newsletter.** Bei einer Anmeldung wird die E-Mail-Adresse nur zum Versand des Newsletters
 gespeichert. Jede E-Mail enthält einen Abmeldelink; die Abmeldung löscht die Adresse.

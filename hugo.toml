@@ -35,8 +35,8 @@ timeZone = "Europe/Zurich"
 [params]
   env = "production"
   author = "U_DAW"
-  description = "Self-hosting, Kubernetes and Swiss cloud, written from production servers."
-  keywords = ["self-hosting", "kubernetes", "hetzner", "switzerland", "privacy"]
+  description = "Self-hosting, Kubernetes and cloud infrastructure, written from production servers."
+  keywords = ["self-hosting", "kubernetes", "hetzner", "vps", "docker"]
   images = ["/og-default.png"]
   DateFormat = "2006-01-02"
   ShowReadingTime = true
@@ -53,14 +53,14 @@ timeZone = "Europe/Zurich"
   disableThemeToggle = false
   hidemeta = false
   comments = false
-  # analytics + newsletter endpoints are filled in once the services are live
-  umamiScriptUrl = ""
-  umamiWebsiteId = ""
+  # self-hosted umami on the same box, cookie-less
+  umamiScriptUrl = "https://stats.rozoom.app/script.js"
+  umamiWebsiteId = "9f750516-e1ba-45ad-90e4-b1389fcc115c"
   newsletterAction = ""
 
 [params.homeInfoParams]
   Title = "Notes from real servers"
-  Content = "Self-hosting, Kubernetes and Swiss cloud services. Every guide is run on a machine we pay for."
+  Content = "Self-hosting, Kubernetes and cloud infrastructure. Every guide is run on a machine we pay for."
 
 [params.assets]
   disableHLJS = true
@@ -77,7 +77,7 @@ timeZone = "Europe/Zurich"
   weight = 1
   title = "Rozoom News"
   [languages.en.params]
-    description = "Self-hosting, Kubernetes and Swiss cloud, written from production servers."
+    description = "Self-hosting, Kubernetes and cloud infrastructure, written from production servers."
   [[languages.en.menu.main]]
     name = "Self-hosting"
     url = "/self-hosting/"
@@ -87,8 +87,8 @@ timeZone = "Europe/Zurich"
     url = "/kubernetes/"
     weight = 20
   [[languages.en.menu.main]]
-    name = "Switzerland"
-    url = "/switzerland/"
+    name = "Cloud"
+    url = "/cloud/"
     weight = 30
   [[languages.en.menu.main]]
     name = "Voice & AI"
@@ -106,7 +106,7 @@ timeZone = "Europe/Zurich"
   weight = 2
   title = "Rozoom News"
   [languages.de.params]
-    description = "Self-Hosting, Kubernetes und Schweizer Cloud, direkt aus dem Produktivbetrieb."
+    description = "Self-Hosting, Kubernetes und Cloud-Infrastruktur, direkt aus dem Produktivbetrieb."
   [[languages.de.menu.main]]
     name = "Self-Hosting"
     url = "/de/self-hosting/"
@@ -116,8 +116,8 @@ timeZone = "Europe/Zurich"
     url = "/de/kubernetes/"
     weight = 20
   [[languages.de.menu.main]]
-    name = "Schweiz"
-    url = "/de/switzerland/"
+    name = "Cloud"
+    url = "/de/cloud/"
     weight = 30
   [[languages.de.menu.main]]
     name = "Voice & AI"
@@ -135,7 +135,7 @@ timeZone = "Europe/Zurich"
   weight = 3
   title = "Rozoom News"
   [languages.fr.params]
-    description = "Auto-hébergement, Kubernetes et cloud suisse, depuis des serveurs en production."
+    description = "Auto-hébergement, Kubernetes et infrastructure cloud, depuis des serveurs en production."
   [[languages.fr.menu.main]]
     name = "Auto-hébergement"
     url = "/fr/self-hosting/"
@@ -145,8 +145,8 @@ timeZone = "Europe/Zurich"
     url = "/fr/kubernetes/"
     weight = 20
   [[languages.fr.menu.main]]
-    name = "Suisse"
-    url = "/fr/switzerland/"
+    name = "Cloud"
+    url = "/fr/cloud/"
     weight = 30
   [[languages.fr.menu.main]]
     name = "Voice & AI"
@@ -164,7 +164,7 @@ timeZone = "Europe/Zurich"
   weight = 4
   title = "Rozoom News"
   [languages.it.params]
-    description = "Self-hosting, Kubernetes e cloud svizzero, da server in produzione."
+    description = "Self-hosting, Kubernetes e infrastruttura cloud, da server in produzione."
   [[languages.it.menu.main]]
     name = "Self-hosting"
     url = "/it/self-hosting/"
@@ -174,8 +174,8 @@ timeZone = "Europe/Zurich"
     url = "/it/kubernetes/"
     weight = 20
   [[languages.it.menu.main]]
-    name = "Svizzera"
-    url = "/it/switzerland/"
+    name = "Cloud"
+    url = "/it/cloud/"
     weight = 30
   [[languages.it.menu.main]]
     name = "Voice & AI"
@@ -193,7 +193,7 @@ timeZone = "Europe/Zurich"
   weight = 5
   title = "Rozoom News"
   [languages.uk.params]
-    description = "Self-hosting, Kubernetes і швейцарський хостинг з реальних серверів."
+    description = "Self-hosting, Kubernetes і хмарна інфраструктура з реальних серверів."
   [[languages.uk.menu.main]]
     name = "Self-hosting"
     url = "/uk/self-hosting/"
@@ -203,8 +203,8 @@ timeZone = "Europe/Zurich"
     url = "/uk/kubernetes/"
     weight = 20
   [[languages.uk.menu.main]]
-    name = "Швейцарія"
-    url = "/uk/switzerland/"
+    name = "Cloud"
+    url = "/uk/cloud/"
     weight = 30
   [[languages.uk.menu.main]]
     name = "Voice & AI"

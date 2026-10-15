@@ -10,11 +10,10 @@ ShowReadingTime: false
 ShowWordCount: false
 ---
 
-**Analytics.** Right now this site collects nothing: no cookies, no page-view counter, no
-third-party scripts. If a self-hosted, cookie-less analytics instance is switched on later, this
-page is updated before it goes live, and only aggregated data is stored: page, referrer, country,
-browser family, screen size. No IP address is kept, no profile is built, nothing is shared with
-third parties.
+**Analytics.** This site runs its own Umami instance on the same server, with no cookies and no
+cross-site tracking. What is stored is an aggregated page view: page, referrer, country, browser
+family, screen size. No IP address is kept, no profile is built, no data goes to third parties, and
+nothing is loaded from Google or any other analytics vendor.
 
 **Newsletter.** If you subscribe, your email address is stored only to send the newsletter. Every
 email has an unsubscribe link; unsubscribing deletes the address.

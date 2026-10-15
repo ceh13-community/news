@@ -10,10 +10,10 @@ ShowReadingTime: false
 ShowWordCount: false
 ---
 
-**Analytics.** Derzeit erhebt diese Seite nichts: keine Cookies, kein Aufrufzähler, keine Skripte
-Dritter. Wird später eine selbst gehostete, cookiefreie Analytics-Instanz aktiviert, wird diese
-Seite vorher aktualisiert, und gespeichert werden nur aggregierte Daten: Seite, Referrer, Land,
-Browserfamilie, Bildschirmgrösse. Keine IP-Adresse, kein Profil, keine Weitergabe an Dritte.
+**Analytics.** Diese Seite betreibt eine eigene Umami-Instanz auf demselben Server, ohne Cookies
+und ohne seitenübergreifendes Tracking. Gespeichert wird ein aggregierter Seitenaufruf: Seite,
+Referrer, Land, Browserfamilie, Bildschirmgrösse. Keine IP-Adresse, kein Profil, keine Weitergabe an
+Dritte, und es wird nichts von Google oder einem anderen Analyseanbieter geladen.
 
 **Newsletter.** Bei einer Anmeldung wird die E-Mail-Adresse nur zum Versand des Newsletters
 gespeichert. Jede E-Mail enthält einen Abmeldelink; die Abmeldung löscht die Adresse.

@@ -10,11 +10,10 @@ ShowReadingTime: false
 ShowWordCount: false
 ---
 
-**Statistiques.** Pour l'instant, ce site ne collecte rien : aucun cookie, aucun compteur de vues,
-aucun script tiers. Si une instance d'analytics auto-hébergée et sans cookies est activée plus tard,
-cette page sera mise à jour avant sa mise en service, et seules des données agrégées seront
-enregistrées : page, référent, pays, famille de navigateur, taille d'écran. Aucune adresse IP
-conservée, aucun profil, aucun partage avec des tiers.
+**Statistiques.** Ce site fait tourner sa propre instance Umami sur le même serveur, sans cookies
+et sans suivi inter-sites. Une vue de page agrégée est enregistrée : page, référent, pays, famille de
+navigateur, taille d'écran. Aucune adresse IP conservée, aucun profil, aucun partage avec des tiers,
+et rien n'est chargé depuis Google ou un autre fournisseur de statistiques.
 
 **Newsletter.** En cas d'inscription, l'adresse e-mail sert uniquement à envoyer la newsletter.
 Chaque e-mail contient un lien de désinscription ; la désinscription supprime l'adresse.

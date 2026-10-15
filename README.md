@@ -44,3 +44,7 @@ or tracking parameter is one Caddy reload, not a site rebuild.
 Push to `main`. The workflow builds, refuses an empty build, rsyncs `public/` to the box and smoke
 tests the live URLs. Secrets: `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_PATH`, `DEPLOY_SSH_KEY`,
 `DEPLOY_KNOWN_HOSTS`.
+
+`DEPLOY_PATH` is `/`: the deploy key on the box is restricted to
+`rrsync -wo /home/ubuntu/stack/news`, so the remote path is relative to that directory and the key
+cannot read anything or open a shell.

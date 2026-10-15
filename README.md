@@ -75,3 +75,10 @@ Placement rules enforced in the templates, not left to discipline:
 - The privacy page carries `{{< ads-notice >}}`, which prints the advertising paragraph only while
   an ad client is configured, so the page cannot describe ads that do not run, or stay silent about
   ads that do.
+
+## What never goes on this site
+
+No employer, no personal names, no city or country of residence, no colleagues, no artefacts from
+paid work. `scripts/check-forbidden.sh` runs in CI before the build and fails the deploy if any of
+those terms appear in `content/`, `i18n/`, `layouts/`, `hugo.toml` or this README. Article schema
+credits the site itself, not a person.

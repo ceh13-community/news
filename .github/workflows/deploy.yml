@@ -35,6 +35,9 @@ jobs:
           sudo install -m 0755 hugo /usr/local/bin/hugo
           hugo version
 
+      - name: Check for forbidden terms
+        run: ./scripts/check-forbidden.sh
+
       - name: Build
         run: hugo --gc --minify --baseURL "https://news.rozoom.app/"
 

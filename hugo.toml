@@ -11,7 +11,7 @@ buildFuture = false
 summaryLength = 30
 [pagination]
   pagerSize = 10
-timeZone = "Europe/Zurich"
+timeZone = "UTC"
 
 [minify]
   disableXML = true

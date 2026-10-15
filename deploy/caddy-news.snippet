@@ -1,0 +1,24 @@
+news.rozoom.app {
+    encode zstd gzip
+
+    header {
+        X-Content-Type-Options nosniff
+        Referrer-Policy no-referrer-when-downgrade
+        -Server
+    }
+
+    # affiliate hops: targets get their tracking parameters once each programme is approved
+    redir /go/hetzner* https://www.hetzner.com/cloud 302
+    redir /go/infomaniak* https://www.infomaniak.com/en 302
+    redir /go/proton* https://proton.me 302
+    redir /go/digitalocean* https://www.digitalocean.com 302
+    redir /go/vultr* https://www.vultr.com 302
+    redir /go/* /affiliate-disclosure/ 302
+
+    # fingerprinted assets can be cached hard, html stays revalidated
+    @immutable path /assets/* /favicon*.png /apple-touch-icon.png /android-chrome-*.png /og-default.png
+    header @immutable Cache-Control "public, max-age=31536000, immutable"
+    header /favicon.ico Cache-Control "public, max-age=604800"
+
+    reverse_proxy news-web:80
+}
